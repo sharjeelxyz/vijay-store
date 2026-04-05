@@ -17,13 +17,17 @@ import { CartSheet } from "@/components/cart-sheet";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import AuthButton from "@/components/AuthButton";
+import Router from "next/router";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const { cart } = useStore();
-
   const cartItemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  const handleLogoClick = () => {
+    Router.push("/");
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -31,9 +35,12 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
-            <Store className="h-5 w-5 text-primary-foreground" />
+            <Store
+              className="h-5 w-5 text-primary-foreground"
+              onClick={handleLogoClick}
+            />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col hidden md:flex">
             <span className="text-lg font-semibold text-foreground">
               Vijay Store
             </span>
