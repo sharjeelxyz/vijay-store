@@ -34,8 +34,8 @@ export default function AuthButton() {
             onClick={() => setOpen(!open)}
             className="flex items-center gap-2 px-3 py-1 rounded-md hover:bg-gray-100 transition"
           >
-            <span className="text-sm font-medium">
-              👤 {user.name || "User"}
+            <span className="text-sm font-medium ">
+              👤 {user?.name?.split(" ")[0] || "User"}
             </span>
           </button>
 
