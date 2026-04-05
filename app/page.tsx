@@ -21,7 +21,7 @@ export default function HomePage() {
             <div className="container mx-auto px-4">
               <div className="max-w-2xl">
                 <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4">
-                  Since 1973
+                  Since 1962
                 </span>
                 <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                   <span className="text-balance">Quality Grains for</span>{" "}
