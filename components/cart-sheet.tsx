@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
 import { useStore } from "@/lib/store-context";
 import { Button } from "@/components/ui/button";
@@ -29,10 +29,16 @@ export function CartSheet({ children }: CartSheetProps) {
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const [user, setUser] = useState(null);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const user = JSON.parse(localStorage.getItem("user") || "null");
-
+  // const user = JSON.parse(localStorage.getItem("user") || "null");
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
   const handleCheckout = () => {
     const user = localStorage.getItem("user");
 
