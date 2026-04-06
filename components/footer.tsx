@@ -1,5 +1,5 @@
-import { Store, MapPin, Phone, Clock } from "lucide-react"
-import Link from "next/link"
+import { Store, MapPin, Phone, Clock } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -13,29 +13,48 @@ export function Footer() {
                 <Store className="h-5 w-5 text-primary-foreground" />
               </div>
               <div>
-                <span className="text-lg font-semibold text-foreground">Vijay Store</span>
-                <p className="text-xs text-muted-foreground">Grain & Provision Merchant</p>
+                <span className="text-lg font-semibold text-foreground">
+                  Vijay Store
+                </span>
+                <p className="text-xs text-muted-foreground">
+                  Grain & Provision Merchant
+                </p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Your trusted partner for quality grains, dals, oils, and daily essentials since 1985.
+              Your trusted partner for quality grains, dals, oils, and daily
+              essentials since 1962.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Categories</h4>
+            <h4 className="mb-4 text-sm font-semibold text-foreground">
+              Categories
+            </h4>
             <nav className="flex flex-col gap-2">
-              <Link href="/category/rice" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                href="/category/rice"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Rice
               </Link>
-              <Link href="/category/atta-flour" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                href="/category/atta-flour"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Atta & Flour
               </Link>
-              <Link href="/category/dals-pulses" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                href="/category/dals-pulses"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Dals & Pulses
               </Link>
-              <Link href="/category/oil" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                href="/category/oil"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Oils
               </Link>
             </nav>
@@ -43,31 +62,42 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">Contact Us</h4>
+            <h4 className="mb-4 text-sm font-semibold text-foreground">
+              Contact Us
+            </h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary" />
                 <span className="text-sm text-muted-foreground">
-                  Shop No. 12, Dadar Market,<br />
+                  Shop No. 12, Dadar Market,
+                  <br />
                   Mumbai - 400014
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">+91 98765 43210</span>
+                <span className="text-sm text-muted-foreground">
+                  +91 98765 43210
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">9:00 AM - 9:00 PM</span>
+                <span className="text-sm text-muted-foreground">
+                  9:00 AM - 9:00 PM
+                </span>
               </div>
             </div>
           </div>
 
           {/* About */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-foreground">About Us</h4>
+            <h4 className="mb-4 text-sm font-semibold text-foreground">
+              About Us
+            </h4>
             <p className="text-sm text-muted-foreground">
-              We are committed to providing the best quality grains and provisions at affordable prices. Serving Mumbai since 1985 with trust and quality.
+              We are committed to providing the best quality grains and
+              provisions at affordable prices. Serving Mumbai since 1962 with
+              trust and quality.
             </p>
           </div>
         </div>
@@ -79,5 +109,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
